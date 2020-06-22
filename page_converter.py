@@ -35,7 +35,7 @@ if page not in PAGE_TABLE:
 
 page_frame = PAGE_TABLE[page] # Schritt 2 (Abbildung Page -> Page-Frame bzw. Nachschauen in Page Tabelle)
 
-page_address = (page_frame * PAGE_SIZE) << 12 # 12 bit Offset, weil Page Size = 2^12
+page_address = PAGE_SIZE << 12 # 12 bit Offset, weil Page Size = 2^12
 
 offset = virt_addr % PAGE_SIZE
 
